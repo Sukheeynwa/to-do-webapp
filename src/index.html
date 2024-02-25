@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+
+	</header>
+	<div id="modal">
+		<dialog id="task-dialog">
+			<h2>Add new task</h2>
+			<form action="">
+				<label for="task-title"><span>Title</span></label>
+				<input type="text" name="taskTitle" id="task-title" placeholder="Enter title" required>
+				<label for="task-description"><span>Description</span></label>
+				<input type="text" name="taskDescription" id="task-description" placeholder="Enter Description" required>
+				<div>
+					<input type="date" name="taskDate" id="task-date" required>
+					<input list="task-priority" placeholder="Priority" id="task-priority-input" required>
+					<datalist id="task-priority">
+						<option value="Priority 1"></option>
+						<option value="Priority 2"></option>
+						<option value="Priority 3"></option>
+						<option value="Priority 4"></option>
+					</datalist>
+				</div>
+				<div>
+					<button id="cancel" type="button">Cancel</button>
+					<button id="add-task" type="submit">Add task</button>
+				</div>
+			</form>
+		</dialog>
+		<dialog id="project-dialog">
+			<h2>Add new project</h2>
+			<form action="" method="post">
+				<label for="project-title"><span>Title</span></label>
+				<input type="text" name="projecTitle" id="project-title" placeholder="Enter title" required>
+				<label for="project-color"><span>Color</span></label>
+				<input type="color" name="projectColor" id="project-color" required>
+				<div>
+					<button id="cancel" type="button">Cancel</button>
+					<button id="add-project" type="submit">Add project</button>
+				</div>
+			</form>
+		</dialog>
+	</div>
+	<div id="header">Header</div>
+	<div id="container">
+		<div id="sidebar">
+			<span></span>
+			<button id="add-task-directly">
+				<div>+</div>
+				<div>Add task</div>
+			</button>
+			<span></span>
+			<button>Inbox</button>
+			<span></span>
+			<button>Today</button>
+			<span></span>
+			<button>Upcoming</button>
+			<span></span>
+			<button id="modal-project">
+				<div>+</div>
+				<div>My Projects</div>
+			</button>
+			<div id="my-projects"></div>
+		</div>
+		<div id="main-content">
+		</div>
+	</div>
+</body>
+</html>
